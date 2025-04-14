@@ -1,0 +1,17 @@
+package = "AoC-lua"
+version = "0.0.0"
+lua     = "5.4"
+
+[description]
+summary = ""
+maintainer = "Yang Shen"
+labels = [ "" ]
+license = "MIT"
+
+[dependencies]
+
+[run]
+args = [ "src/main.lua" ]
+
+[build]
+type = "builtin"
