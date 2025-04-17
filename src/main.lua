@@ -49,7 +49,7 @@ end
 -- Load module
 --
 
-local fullModulePath = string.format("y%s.d%s.main", year, day)
+local fullModulePath = string.format("y%s.d%s", year, day)
 local ok, mod = pcall(require, fullModulePath)
 if not ok then
 	print("Module not found")
