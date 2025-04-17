@@ -1,5 +1,51 @@
 {
   "version": "1.0.0",
+  "dependencies": {
+    "rocks": {
+      "832fd9862ce671c0c9777855d4c8b19f9ad9c2679fb5466c3a183785a51b76b0": {
+        "name": "luafilesystem",
+        "version": "1.8.0-1",
+        "pinned": false,
+        "opt": false,
+        "dependencies": [],
+        "constraint": null,
+        "binaries": [],
+        "source": "luarocks_rockspec+https://luarocks.org/",
+        "source_url": {
+          "type": "git",
+          "url": "https://github.com/keplerproject/luafilesystem",
+          "ref": "v1_8_0"
+        },
+        "hashes": {
+          "rockspec": "sha256-ylWfvz35v68L9Sa92bQHDfFylaS7PEmZr62cBfRU06I=",
+          "source": "sha256-pEA+Z1pkykWLTT6NHQ5lo8roOh2P0fiHtnK+byTkF5o="
+        }
+      },
+      "d9a7649d6af441ccdb363305caa8c2c92a9516da822225fca6b3e1fd243f896d": {
+        "name": "penlight",
+        "version": "1.5.4-1",
+        "pinned": false,
+        "opt": false,
+        "dependencies": [
+          "832fd9862ce671c0c9777855d4c8b19f9ad9c2679fb5466c3a183785a51b76b0"
+        ],
+        "constraint": "==1.5",
+        "binaries": [],
+        "source": "luarocks_rockspec+https://luarocks.org/",
+        "source_url": {
+          "type": "url",
+          "url": "https://luarocks.org/penlight-1.5.4-1.src.rock"
+        },
+        "hashes": {
+          "rockspec": "sha256-FzCjtEk29qnodS++FN97iwz9RbM2V8JFJK+3OtPUsB4=",
+          "source": "sha256-s5Lh6K/vKUUAOm0AWSNKZ7kpPfjh2qhIfY+rRqXSl0g="
+        }
+      }
+    },
+    "entrypoints": [
+      "d9a7649d6af441ccdb363305caa8c2c92a9516da822225fca6b3e1fd243f896d"
+    ]
+  },
   "test_dependencies": {
     "rocks": {
       "01a3c364614bddff7370223a5a9c4580f8e62d144384148444c518ec5367a59b": {

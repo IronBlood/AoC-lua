@@ -9,6 +9,7 @@ labels = [ "" ]
 license = "MIT"
 
 [dependencies]
+penlight = "==1.5"
 
 [run]
 args = [ "src/main.lua" ]
