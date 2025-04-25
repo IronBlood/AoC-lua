@@ -21,7 +21,7 @@ describe("2015-12-01 p1", function()
 	end
 end)
 
-describe("test-problem", function()
+describe("2015-12-02 p2", function()
 	local testcases = {
 		{ ")",     1 },
 		{ "()())", 5 },
