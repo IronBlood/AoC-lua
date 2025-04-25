@@ -9,6 +9,7 @@ labels = [ "" ]
 license = "MIT"
 
 [dependencies]
+md5 = "==1.3"
 penlight = "==1.5"
 
 [run]
