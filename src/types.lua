@@ -1,4 +1,3 @@
 ---@meta
----@class MainModule
----@field main fun(input: string): any
+---@alias MainFunction fun(input: string): any
 

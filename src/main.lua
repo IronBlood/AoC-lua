@@ -50,7 +50,7 @@ end
 --
 
 local fullModulePath = string.format("y%s.d%s", year, day)
-local ok, mod = pcall(require, fullModulePath)
+local ok, main = pcall(require, fullModulePath)
 if not ok then
 	print("Module not found")
 	os.exit(0)
@@ -60,10 +60,10 @@ end
 -- Invoke the main function
 --
 
-if type(mod) == "table" and type(mod.main) == "function" then
-	---@cast mod MainModule
-	mod.main(inputData)
+if type(main) == "function" then
+	---@cast main MainFunction
+	main(inputData)
 else
-	print("Module doesn't have a callable 'main' function")
+	print("Module doesn't return a callable 'main' function")
 end
 
