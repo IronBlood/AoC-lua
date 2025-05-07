@@ -4,6 +4,9 @@
 if #arg < 1 then
 	print("Usage: lx run <year>-<day>")
 	print("       for example, lx run 2015-01")
+	print("Or, if you need to initialize source code and test file")
+	print("for a new day, use this command instead")
+	print("       lx run <year>-<day> s")
 	os.exit(0)
 end
 
@@ -25,6 +28,12 @@ if yearNum < 2015 or yearNum > 2024 then
 end
 if dayNum < 1 or dayNum > 25 then
 	print("Day must be between 01 and 25")
+	os.exit(0)
+end
+
+if arg[2] == "scaffolding" or arg[2] == "s" then
+	local scaffolding = require("scaffolding")
+	scaffolding(year, day)
 	os.exit(0)
 end
 
