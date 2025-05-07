@@ -1,4 +1,4 @@
----@class Mod201505
+---@type Mod201505
 local lib = require "y2015.d05.lib"
 
 describe("2015-12-05 p1", function()

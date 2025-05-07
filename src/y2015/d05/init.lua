@@ -1,4 +1,4 @@
----@class Mod201505
+---@type Mod201505
 local lib = require "y2015.d05.lib"
 local splitlines = require("pl.stringx").splitlines
 local reduce = require("pl.tablex").reduce
