@@ -20,6 +20,27 @@
           "source": "sha256-V2JwpVdSiUJUwsug1J1zWV037E6op15Vf9rnr/gOGc8="
         }
       },
+      "b7fa2fc76ac7b515ab09c4982a9805528218639fda3b3a86a49825f3cf42bd0b": {
+        "name": "lua-cjson",
+        "version": "2.1.0-1",
+        "pinned": false,
+        "opt": false,
+        "dependencies": [],
+        "constraint": "==2.1.0",
+        "binaries": [
+          "lua2json",
+          "json2lua"
+        ],
+        "source": "luarocks_rockspec+https://luarocks.org/",
+        "source_url": {
+          "type": "url",
+          "url": "https://luarocks.org/lua-cjson-2.1.0-1.src.rock"
+        },
+        "hashes": {
+          "rockspec": "sha256-L/6Yon2ek6NnEeifAy3qsnT2cMCB8IdaCgVeu3+1lvs=",
+          "source": "sha256-23r4ScVV0aR09yn+Sla1Uw6b57JHSet6fEdKfHIHuXI="
+        }
+      },
       "d9a7649d6af441ccdb363305caa8c2c92a9516da822225fca6b3e1fd243f896d": {
         "name": "penlight",
         "version": "1.5.4-1",
@@ -61,7 +82,8 @@
     },
     "entrypoints": [
       "d9a7649d6af441ccdb363305caa8c2c92a9516da822225fca6b3e1fd243f896d",
-      "fe5200ee0b383ed719c2ffde9816b299d2689a8c54391bb427b93c47032db6a7"
+      "fe5200ee0b383ed719c2ffde9816b299d2689a8c54391bb427b93c47032db6a7",
+      "b7fa2fc76ac7b515ab09c4982a9805528218639fda3b3a86a49825f3cf42bd0b"
     ]
   },
   "test_dependencies": {
