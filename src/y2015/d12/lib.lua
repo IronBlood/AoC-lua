@@ -1,4 +1,4 @@
-local cjson = require "cjson"
+local cjson = require("cjson")
 
 local function is_array(tbl)
 	if type(tbl) ~= "table" then
@@ -21,7 +21,7 @@ local function contains_red(tbl)
 	if type(tbl) ~= "table" then
 		return false
 	end
-	for _,v in pairs(tbl) do
+	for _, v in pairs(tbl) do
 		if v == "red" then
 			return true
 		end
@@ -41,7 +41,7 @@ return {
 			if type(jobj) == "number" then
 				sum = sum + jobj
 			elseif type(jobj) == "table" then
-				for _,v in pairs(jobj) do
+				for _, v in pairs(jobj) do
 					dfs(v)
 				end
 			end
@@ -60,7 +60,7 @@ return {
 				end
 
 				local sum = 0
-				for _,v in pairs(data) do
+				for _, v in pairs(data) do
 					sum = sum + dfs(v)
 				end
 				return sum
@@ -71,4 +71,3 @@ return {
 		return math.floor(dfs(cjson.decode(json_str)))
 	end,
 }
-

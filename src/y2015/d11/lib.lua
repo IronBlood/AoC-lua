@@ -107,4 +107,3 @@ return {
 		return _bytes_to_text(arr)
 	end,
 }
-

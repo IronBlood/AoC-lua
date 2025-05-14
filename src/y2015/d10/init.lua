@@ -1,5 +1,5 @@
 ---@type Mod201510
-local lib = require "y2015.d10.lib"
+local lib = require("y2015.d10.lib")
 local look_and_say = lib.look_and_say
 
 ---@param input string
@@ -19,11 +19,10 @@ end
 
 ---@type MainFunction
 local function main(input)
-	local set = {};
+	local set = {}
 	set[40] = true
 	set[50] = true
 	loop(input, 50, set)
 end
 
 return main
-

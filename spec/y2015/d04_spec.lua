@@ -1,10 +1,12 @@
 ---@type Mod201504
-local lib = require "y2015.d04.lib"
+local lib = require("y2015.d04.lib")
 
 describe("2015-12-04 p1", function()
 	local testcases = {
-		{ "abcdef",  609043 },
+		-- stylua: ignore start
+		{ "abcdef",   609043 },
 		{ "pqrstuv", 1048970 },
+		-- stylua: ignore end
 	}
 	--- with `SKIP_MD5=true lx test`, these tests will be ignored
 	local skip_md5 = os.getenv("SKIP_MD5")
@@ -16,4 +18,3 @@ describe("2015-12-04 p1", function()
 		end
 	end
 end)
-

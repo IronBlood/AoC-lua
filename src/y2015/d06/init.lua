@@ -1,6 +1,6 @@
 ---@type Mod201506
-local lib = require "y2015.d06.lib"
-local splitlines = require "pl.stringx".splitlines
+local lib = require("y2015.d06.lib")
+local splitlines = require("pl.stringx").splitlines
 
 ---@type MainFunction
 local function main(input)
@@ -10,4 +10,3 @@ local function main(input)
 end
 
 return main
-

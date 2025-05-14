@@ -3,6 +3,7 @@ local lib = require("y2015.d01.lib")
 
 describe("2015-12-01 p1", function()
 	local testcases = {
+		-- stylua: ignore start
 		{ "(())",    0 },
 		{ "(((",     3 },
 		{ "(()(()(", 3 },
@@ -11,6 +12,7 @@ describe("2015-12-01 p1", function()
 		{ "))(",     -1 },
 		{ ")))",     -3 },
 		{ ")())())", -3 },
+		-- stylua: ignore end
 	}
 
 	for i, tc in ipairs(testcases) do
@@ -23,7 +25,7 @@ end)
 
 describe("2015-12-02 p2", function()
 	local testcases = {
-		{ ")",     1 },
+		{ ")", 1 },
 		{ "()())", 5 },
 	}
 	for i, tc in ipairs(testcases) do
@@ -32,4 +34,3 @@ describe("2015-12-02 p2", function()
 		end)
 	end
 end)
-

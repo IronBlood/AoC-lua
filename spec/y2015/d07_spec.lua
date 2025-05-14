@@ -1,4 +1,4 @@
-local sim = require "y2015.d07.lib"
+local sim = require("y2015.d07.lib")
 
 describe("2015-12-07 p1", function()
 	local commands = {
@@ -14,6 +14,7 @@ describe("2015-12-07 p1", function()
 
 	it("test-1", function()
 		local result = sim(commands)
+		-- stylua: ignore start
 		assert.are_equal(72,    result.d)
 		assert.are_equal(507,   result.e)
 		assert.are_equal(492,   result.f)
@@ -22,6 +23,6 @@ describe("2015-12-07 p1", function()
 		assert.are_equal(65079, result.i)
 		assert.are_equal(123,   result.x)
 		assert.are_equal(456,   result.y)
+		-- stylua: ignore end
 	end)
 end)
-

@@ -1,5 +1,5 @@
-local md5 = require "md5"
-local startswith = require "pl.stringx".startswith
+local md5 = require("md5")
+local startswith = require("pl.stringx").startswith
 
 ---@class Mod201504
 ---@field mine_coin fun(str: string, digit?: number): number
@@ -19,4 +19,3 @@ return {
 		return -1
 	end,
 }
-

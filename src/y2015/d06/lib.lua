@@ -1,4 +1,4 @@
-local split = require "pl.stringx".split
+local split = require("pl.stringx").split
 
 local function gen_grid()
 	local grid = {}
@@ -62,8 +62,8 @@ return {
 		local grid = gen_grid()
 		for i = 1, #lines do
 			local parsed = parse(lines[i])
-			for j = parsed.s[1]+1, parsed.e[1]+1 do
-				for k = parsed.s[2]+1, parsed.e[2]+1 do
+			for j = parsed.s[1] + 1, parsed.e[1] + 1 do
+				for k = parsed.s[2] + 1, parsed.e[2] + 1 do
 					if parsed.v == 2 then
 						grid[j][k] = 1 - grid[j][k]
 					else
@@ -79,9 +79,9 @@ return {
 		local grid = gen_grid()
 		for i = 1, #lines do
 			local parsed = parse(lines[i])
-			for j = parsed.s[1]+1, parsed.e[1]+1 do
-				for k = parsed.s[2]+1, parsed.e[2]+1 do
-					if      parsed.v == 0 then
+			for j = parsed.s[1] + 1, parsed.e[1] + 1 do
+				for k = parsed.s[2] + 1, parsed.e[2] + 1 do
+					if parsed.v == 0 then
 						grid[j][k] = math.max(grid[j][k] - 1, 0)
 					elseif parsed.v == 1 then
 						grid[j][k] = grid[j][k] + 1
@@ -95,4 +95,3 @@ return {
 		return count_grid(grid)
 	end,
 }
-

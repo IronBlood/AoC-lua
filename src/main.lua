@@ -75,4 +75,3 @@ if type(main) == "function" then
 else
 	print("Module doesn't return a callable 'main' function")
 end
-

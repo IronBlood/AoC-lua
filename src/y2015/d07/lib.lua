@@ -1,4 +1,4 @@
-local stringx = require "pl.stringx"
+local stringx = require("pl.stringx")
 local stringx_split = stringx.split
 local stringx_count = stringx.count
 
@@ -84,13 +84,13 @@ local function evaluate(values, e)
 
 	-- Lua 5.4
 	local v
-	if     e.opcode == "ASSIGN" then
+	if e.opcode == "ASSIGN" then
 		v = get_value(e.oprands[1])
-	elseif e.opcode == "NOT"    then
+	elseif e.opcode == "NOT" then
 		v = ~get_value(e.oprands[1])
-	elseif e.opcode == "AND"    then
+	elseif e.opcode == "AND" then
 		v = get_value(e.oprands[1]) & get_value(e.oprands[2])
-	elseif e.opcode == "OR"     then
+	elseif e.opcode == "OR" then
 		v = get_value(e.oprands[1]) | get_value(e.oprands[2])
 	elseif e.opcode == "LSHIFT" then
 		v = get_value(e.oprands[1]) << get_value(e.oprands[2])
@@ -144,7 +144,7 @@ local function sim(lines, part)
 	if part == 2 then
 		-- reset
 		ans = {
-			["b"] = ans["a"]
+			["b"] = ans["a"],
 		}
 		for i = 1, #expressions do
 			local e = expressions[i]
@@ -181,4 +181,3 @@ local function sim(lines, part)
 end
 
 return sim
-

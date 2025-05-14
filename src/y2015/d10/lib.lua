@@ -16,4 +16,3 @@ return {
 		return table.concat(builder)
 	end,
 }
-

@@ -1,5 +1,5 @@
 ---@type Mod201512
-local lib = require "y2015.d12.lib"
+local lib = require("y2015.d12.lib")
 
 ---@type MainFunction
 local function main(input)
@@ -8,4 +8,3 @@ local function main(input)
 end
 
 return main
-

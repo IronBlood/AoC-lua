@@ -3,8 +3,10 @@ local lib = require("y2015.d02.lib")
 
 describe("2015-12-01", function()
 	local testcases = {
+		-- stylua: ignore start
 		{ "2x3x4",  58, 34 },
 		{ "1x1x10", 43, 14 },
+		-- stylua: ignore end
 	}
 	for i, tc in ipairs(testcases) do
 		it("test-" .. i, function()

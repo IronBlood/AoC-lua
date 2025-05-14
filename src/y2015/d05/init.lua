@@ -1,5 +1,5 @@
 ---@type Mod201505
-local lib = require "y2015.d05.lib"
+local lib = require("y2015.d05.lib")
 local splitlines = require("pl.stringx").splitlines
 local reduce = require("pl.tablex").reduce
 
@@ -15,4 +15,3 @@ local function main(input)
 end
 
 return main
-

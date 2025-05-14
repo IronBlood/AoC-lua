@@ -8,4 +8,3 @@ local function main(input)
 end
 
 return main
-

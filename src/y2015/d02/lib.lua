@@ -27,7 +27,7 @@ end
 M.total_ribbon = function(str)
 	local arr = split(str, "x")
 	local arr_dup = {}
-	for k,v in pairs(arr) do
+	for k, v in pairs(arr) do
 		arr_dup[k] = tonumber(v)
 	end
 	table.sort(arr_dup)

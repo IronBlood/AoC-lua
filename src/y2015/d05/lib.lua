@@ -17,15 +17,15 @@ return {
 			return 0
 		end
 
-		for i = 1, #str-1 do
-			local seg = str:sub(i, i+1)
+		for i = 1, #str - 1 do
+			local seg = str:sub(i, i + 1)
 			if seg == "ab" or seg == "cd" or seg == "pq" or seg == "xy" then
-				return 0;
+				return 0
 			end
 		end
 
-		for i = 1, #str-1 do
-			if str:sub(i, i) == str:sub(i+1, i+1) then
+		for i = 1, #str - 1 do
+			if str:sub(i, i) == str:sub(i + 1, i + 1) then
 				return 1
 			end
 		end
@@ -34,9 +34,9 @@ return {
 	end,
 	is_nice2 = function(str)
 		local found = false
-		for i = 1, #str-1, 1 do
-			local seg = str:sub(i, i+1)
-			if str:find(seg, i+2, true) then
+		for i = 1, #str - 1, 1 do
+			local seg = str:sub(i, i + 1)
+			if str:find(seg, i + 2, true) then
 				found = true
 				break
 			end
@@ -46,8 +46,8 @@ return {
 		end
 
 		found = false
-		for i = 2, #str-1 do
-			if str:sub(i-1, i-1) == str:sub(i+1, i+1) then
+		for i = 2, #str - 1 do
+			if str:sub(i - 1, i - 1) == str:sub(i + 1, i + 1) then
 				found = true
 				break
 			end
@@ -56,4 +56,3 @@ return {
 		return found and 1 or 0
 	end,
 }
-

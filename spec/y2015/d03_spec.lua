@@ -1,11 +1,13 @@
 ---@type Mod201503
-local lib = require "y2015.d03.lib"
+local lib = require("y2015.d03.lib")
 
 describe("2015-12-03 p1", function()
 	local testcases = {
+		-- stylua: ignore start
 		{ ">",          2 },
 		{ "^>v<",       4 },
 		{ "^v^v^v^v^v", 2 },
+		-- stylua: ignore end
 	}
 	for i, tc in ipairs(testcases) do
 		it("test-" .. i, function()
@@ -16,9 +18,11 @@ end)
 
 describe("2015-12-03 p2", function()
 	local testcases = {
-		{ "^v",         3 },
-		{ "^>v<",       3 },
+		-- stylua: ignore start
+		{ "^v",          3 },
+		{ "^>v<",        3 },
 		{ "^v^v^v^v^v", 11 },
+		-- stylua: ignore end
 	}
 	for i, tc in ipairs(testcases) do
 		it("test-" .. i, function()
@@ -26,4 +30,3 @@ describe("2015-12-03 p2", function()
 		end)
 	end
 end)
-

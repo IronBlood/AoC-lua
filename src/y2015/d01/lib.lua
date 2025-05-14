@@ -33,4 +33,3 @@ M.first_enter_basement = function(str)
 end
 
 return M
-

@@ -1,11 +1,11 @@
-local attributes = require "lfs".attributes
+local attributes = require("lfs").attributes
 
 local function create_folder(year, day)
 	local list = {
 		string.format("src/y%s/d%s", year, day),
 		string.format("spec/y%s", year),
 	}
-	for _,folder_path in pairs(list) do
+	for _, folder_path in pairs(list) do
 		if not attributes(folder_path) then
 			print("Creating folder " .. folder_path)
 			os.execute("mkdir -p " .. folder_path)
@@ -33,7 +33,7 @@ end
 
 local function create_init(year, day)
 	local file_path = string.format("src/y%s/d%s/init.lua", year, day)
-	local init_header = string.format("---@type Mod%s%s\nlocal lib = require \"y%s.d%d.lib\"\n\n", year, day, year, day)
+	local init_header = string.format('---@type Mod%s%s\nlocal lib = require("y%s.d%d.lib")\n\n', year, day, year, day)
 	local init_body = "---@type MainFunction\nlocal function main(input)\nend\n\nreturn main\n\n"
 	local content = init_header .. init_body
 	create_file(file_path, content)
@@ -47,7 +47,7 @@ end
 
 local function create_test(year, day)
 	local file_path = string.format("spec/y%s/d%s_spec.lua", year, day)
-	local content = string.format("---@type Mod%s%s\nlocal lib = require \"y%s.d%d.lib\"\n\n", year, day, year, day)
+	local content = string.format('---@type Mod%s%s\nlocal lib = require("y%s.d%d.lib")\n\n', year, day, year, day)
 	create_file(file_path, content)
 end
 
@@ -61,4 +61,3 @@ local function scaffolding(year, day)
 end
 
 return scaffolding
-

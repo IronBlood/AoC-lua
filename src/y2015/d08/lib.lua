@@ -1,4 +1,4 @@
-local reduce = require "pl.tablex".reduce
+local reduce = require("pl.tablex").reduce
 
 ---@param line string
 ---@return number
@@ -30,7 +30,7 @@ local function encode_len(line)
 	local len = 6
 	for i = 2, #line - 1 do
 		local c = line:sub(i, i)
-		if c == "\\" or c == "\"" then
+		if c == "\\" or c == '"' then
 			len = len + 2
 		else
 			len = len + 1
@@ -54,4 +54,3 @@ return {
 		end, lines, 0)
 	end,
 }
-

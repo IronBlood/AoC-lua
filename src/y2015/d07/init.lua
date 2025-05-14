@@ -1,5 +1,5 @@
-local sim = require "y2015.d07.lib"
-local splitlines = require "pl.stringx".splitlines
+local sim = require("y2015.d07.lib")
+local splitlines = require("pl.stringx").splitlines
 
 ---@type MainFunction
 local function main(input)
@@ -9,4 +9,3 @@ local function main(input)
 end
 
 return main
-

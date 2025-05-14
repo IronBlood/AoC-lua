@@ -8,11 +8,19 @@ end
 ---@param c string
 local update_pos = function(pos, c)
 	local cases = {
-		["^"] = function() pos[1] = pos[1] - 1 end,
-		["v"] = function() pos[1] = pos[1] + 1 end,
-		["<"] = function() pos[2] = pos[2] - 1 end,
-		[">"] = function() pos[2] = pos[2] + 1 end,
-	}
+		["^"] = function()
+			pos[1] = pos[1] - 1
+		end,
+		["v"] = function()
+			pos[1] = pos[1] + 1
+		end,
+		["<"] = function()
+			pos[2] = pos[2] - 1
+		end,
+		[">"] = function()
+			pos[2] = pos[2] + 1
+		end,
+	};
 
 	(cases[c] or function() end)()
 end
@@ -47,7 +55,7 @@ return {
 	end,
 	count_horse_with_robo = function(str)
 		local pos_santa = { 0, 0 }
-		local pos_robo  = { 0, 0 }
+		local pos_robo = { 0, 0 }
 		local set = {}
 		local size = 0
 		size = update_set(set, pos_santa, size)
@@ -60,4 +68,3 @@ return {
 		return size
 	end,
 }
-

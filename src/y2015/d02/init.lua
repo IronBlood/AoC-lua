@@ -7,14 +7,13 @@ local lib = require("y2015.d02.lib")
 local function main(input)
 	local lines = splitlines(input)
 
-	print(reduce(function (acc, line)
+	print(reduce(function(acc, line)
 		return acc + lib.total_square(line)
 	end, lines, 0))
 
-	print(reduce(function (acc, line)
+	print(reduce(function(acc, line)
 		return acc + lib.total_ribbon(line)
 	end, lines, 0))
 end
 
 return main
-

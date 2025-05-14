@@ -1,5 +1,5 @@
-local split = require "pl.stringx".split
-local table_size = require "pl.tablex".size
+local split = require("pl.stringx").split
+local table_size = require("pl.tablex").size
 
 ---@alias AdjTable { [string]: { [string]: number } }
 
@@ -49,7 +49,7 @@ local function find_extreme_route_length(lines, comp, init)
 		end
 	end
 
-	for city,_ in pairs(adj) do
+	for city, _ in pairs(adj) do
 		local seen = {}
 		seen[city] = true
 		dfs(seen, city, 0)
@@ -70,4 +70,3 @@ return {
 		return find_extreme_route_length(lines, math.max, 0)
 	end,
 }
-
