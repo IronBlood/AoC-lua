@@ -19,4 +19,16 @@ function M.is_array(tbl)
 	return count == #tbl
 end
 
+---@generic T: any
+---@param tbl T[]
+---@param cb fun(x: T): boolean
+function M.some(tbl, cb)
+	for _, entry in ipairs(tbl) do
+		if cb(entry) then
+			return true
+		end
+	end
+	return false
+end
+
 return M
