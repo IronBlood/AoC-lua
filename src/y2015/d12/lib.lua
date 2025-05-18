@@ -1,21 +1,5 @@
 local cjson = require("cjson")
-
-local function is_array(tbl)
-	if type(tbl) ~= "table" then
-		return false
-	end
-	local count = 0
-	for k, _ in pairs(tbl) do
-		if type(k) ~= "number" then
-			return false
-		end
-		if k <= 0 or k ~= math.floor(k) then
-			return false
-		end
-		count = count + 1
-	end
-	return count == #tbl
-end
+local is_array = require("utils.array").is_array
 
 local function contains_red(tbl)
 	if type(tbl) ~= "table" then
