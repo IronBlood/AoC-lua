@@ -1,7 +1,7 @@
 ---@type Mod201513
 local lib = require("y2015.d13.lib")
 
-describe("test-problem", function()
+describe("2025-12-13", function()
 	local testcases = {
 		{
 			[[Alice would gain 54 happiness units by sitting next to Bob.
